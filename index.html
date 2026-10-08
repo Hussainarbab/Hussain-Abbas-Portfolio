@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEBORA STUDIO | Web Development &amp; Web Applications</title>
-<meta name="description" content="WEBORA STUDIO builds modern websites and web applications using React.js, Next.js, JavaScript and WordPress for businesses, startups and professionals.">
+<title>Hussain Abbas | Frontend &amp; WordPress Developer</title>
+<meta name="description" content="Hussain Abbas is a frontend, WordPress and theme developer creating responsive websites, modern web experiences and AI-assisted solutions.">
 <meta name="theme-color" content="#050810">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -160,6 +160,7 @@
     padding:168px 0 100px;
     display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;
   }
+  .hero.wrap{padding:168px 28px 100px;}
   .hero-headline{
     font-size:clamp(38px,5.4vw,60px);
     line-height:1.08;
@@ -316,7 +317,7 @@
   .process-step p{color:var(--text-muted);font-size:14px;}
 
   /* ---------- About ---------- */
-  .about-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:center;}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;}
   .portrait{
     aspect-ratio:1/1.05;border-radius:20px;
     background:linear-gradient(150deg,rgba(59,130,246,0.16),rgba(34,211,238,0.06));
@@ -351,6 +352,25 @@
   .member-portrait img{width:100%;height:100%;object-fit:cover;}
   .member-body h3{font-size:19px;margin-bottom:4px;}
   .member-body p{font-size:14px;color:var(--text-muted);}
+  .hero-photo-wrap{
+    width:min(100%,430px);aspect-ratio:0.88;border-radius:28px;justify-self:center;
+    position:relative;padding:12px;background:linear-gradient(145deg,rgba(90,165,255,.45),rgba(34,211,238,.08));
+    box-shadow:0 30px 100px -45px rgba(34,211,238,.65);
+  }
+  .hero-photo-wrap::before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.2);border-radius:20px;pointer-events:none;z-index:1;}
+  .hero-photo{width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:20px;background:var(--bg-2);}
+  .photo-note{
+    position:absolute;bottom:30px;left:-32px;padding:14px 18px;border:1px solid var(--border-bright);
+    border-radius:12px;background:rgba(8,11,20,.9);backdrop-filter:blur(12px);font-family:var(--font-mono);font-size:12px;
+    box-shadow:0 16px 40px rgba(0,0,0,.35);
+  }
+  .photo-note strong{display:block;color:var(--text);font-family:var(--font-display);font-size:15px;}
+  .experience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+  .experience-card{padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);}
+  .experience-date{font-family:var(--font-mono);font-size:12px;color:var(--blue-bright);letter-spacing:.06em;}
+  .experience-card h3{font-size:20px;margin:10px 0 4px;}
+  .experience-company{color:var(--text-muted);font-size:14px;margin-bottom:12px;}
+  .experience-card p:last-child{color:var(--text-muted);font-size:14px;}
 
   /* ---------- Stats ---------- */
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
@@ -454,21 +474,27 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width:980px){
+    header{background:rgba(5,7,13,0.92);backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--border);}
     .nav-links{display:none;}
     .nav-actions .btn-primary{display:none;}
     .hamburger{display:flex;}
     .hero{grid-template-columns:1fr;padding-top:140px;}
+    .hero.wrap{padding:140px 28px 72px;}
     .hero-visual{height:380px;margin-top:20px;}
     .grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}
     .process-track{grid-template-columns:repeat(2,1fr);row-gap:44px;}
     .process-track::before,.process-line-fill{display:none;}
     .about-grid{grid-template-columns:1fr;}
     .portrait{max-width:320px;margin:0 auto;}
+    .hero-photo-wrap{max-width:360px;}
+    .photo-note{left:-12px;}
+    .experience-grid{grid-template-columns:1fr;}
     .stats-grid{grid-template-columns:repeat(2,1fr);}
     .contact-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr;gap:30px;}
   }
   @media (max-width:600px){
+    .hero.wrap{padding:132px 20px 64px;}
     .grid-3,.grid-4,.grid-2{grid-template-columns:1fr;}
     .form-row{grid-template-columns:1fr;}
     .cta-section{padding:56px 24px;margin:0 16px;}
@@ -488,10 +514,10 @@
 <header id="siteHeader">
   <div class="wrap nav-inner">
     <a href="#home" class="logo">
-      <span class="logo-mark">WS</span>
+      <span class="logo-mark">HA</span>
       <span>
-      WEBORA STUDIO
-        <span class="logo-sub">web development studio</span>
+      HUSSAIN ABBAS
+        <span class="logo-sub">frontend &amp; WordPress developer</span>
       </span>
     </a>
     <nav class="nav-links">
@@ -499,7 +525,7 @@
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
-      <a href="#process">Process</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
@@ -516,7 +542,7 @@
   <a href="#services">Services</a>
   <a href="#projects">Projects</a>
   <a href="#about">About</a>
-  <a href="#process">Process</a>
+  <a href="#experience">Experience</a>
   <a href="#contact">Contact</a>
   <a href="#contact" class="btn btn-primary" style="margin-top:10px;">Start a Project</a>
 </div>
@@ -525,39 +551,22 @@
   <!-- HERO -->
   <section class="hero wrap" id="home">
     <div>
-      <div class="eyebrow reveal in">Web Development Studio</div>
-      <h1 class="hero-headline reveal in">We Build Digital Experiences That <span class="accent">Help Businesses Grow.</span></h1>
-      <p class="hero-sub reveal in" style="transition-delay:.1s;">WEBORA STUDIO creates modern websites and powerful web applications for businesses, startups and professionals.</p>
+      <div class="eyebrow reveal in">Frontend · WordPress · Theme Developer</div>
+      <h1 class="hero-headline reveal in">Hi, I’m Hussain Abbas.<br><span class="accent">I build websites that work beautifully.</span></h1>
+      <p class="hero-sub reveal in" style="transition-delay:.1s;">I turn ideas into fast, polished and responsive digital experiences—from custom WordPress themes to modern React and Next.js interfaces.</p>
       <div class="hero-actions reveal in" style="transition-delay:.2s;">
-        <a href="#contact" class="btn btn-primary">Start a Project</a>
-        <a href="#projects" class="btn btn-ghost">View Our Work</a>
+        <a href="#contact" class="btn btn-primary">Let’s Work Together</a>
+        <a href="#projects" class="btn btn-ghost">Explore My Skills</a>
       </div>
       <div class="trust-label reveal in" style="transition-delay:.3s;">
         <span class="dot"></span>
-        Web Development Studio · Gilgit, Pakistan
+        Available for freelance &amp; full-time opportunities
       </div>
     </div>
 
-    <div class="hero-visual reveal in" style="transition-delay:.15s;">
-      <div class="terminal">
-        <div class="terminal-bar">
-          <span></span><span></span><span></span>
-          <span class="terminal-title">WEBORA-STUDIO.js</span>
-        </div>
-        <div class="terminal-body" id="typedTerminal"></div>
-      </div>
-      <div class="float-card fc1">
-        <div class="label">Status</div>
-        <div class="value" style="color:#34d399;">Deployed ✓</div>
-      </div>
-      <div class="float-card fc2">
-        <div class="label">Stack</div>
-        <div class="value">Next.js</div>
-      </div>
-      <div class="float-card fc3">
-        <div class="label">Performance</div>
-        <div class="value">98 / 100</div>
-      </div>
+    <div class="hero-photo-wrap reveal in" style="transition-delay:.15s;">
+      <img class="hero-photo" src="./hussain.png" alt="Hussain Abbas, frontend and WordPress developer">
+      <div class="photo-note"><strong>Thoughtful design. Clean code.</strong>Built for real people.</div>
     </div>
   </section>
 
@@ -565,45 +574,45 @@
   <section class="section" id="services">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">What We Build</div>
-        <h2>Digital solutions designed around your goals</h2>
-        <p class="section-desc">From business websites to custom web applications, we build digital solutions designed around your goals.</p>
+        <div class="eyebrow">What I Build</div>
+        <h2>Ideas made real, one thoughtful detail at a time</h2>
+        <p class="section-desc">From first sketch to final launch, I create useful, responsive websites that look sharp and feel effortless to use.</p>
       </div>
       <div class="grid grid-3">
         <div class="card reveal">
           <div class="service-icon">◆</div>
-          <h3>Website Development</h3>
-          <p>Modern, responsive websites designed to represent your business professionally.</p>
+          <h3>Frontend Development</h3>
+          <p>Accessible, responsive interfaces with HTML, CSS, JavaScript and modern frontend tools.</p>
         </div>
         <div class="card reveal" style="transition-delay:.05s;">
           <div class="service-icon">⚛</div>
           <h3>React.js Development</h3>
-          <p>Interactive and scalable web interfaces using modern React.js development practices.</p>
+          <p>Interactive React.js experiences built with reusable components and maintainable code.</p>
         </div>
         <div class="card reveal" style="transition-delay:.1s;">
           <div class="service-icon">▲</div>
           <h3>Next.js Development</h3>
-          <p>Fast, SEO-friendly and high-performance websites and web applications with Next.js.</p>
+          <p>Fast, search-friendly web experiences and applications using Next.js.</p>
         </div>
         <div class="card reveal" style="transition-delay:.15s;">
           <div class="service-icon">◈</div>
           <h3>WordPress Development</h3>
-          <p>Professional WordPress websites customized to your business requirements.</p>
+          <p>Flexible WordPress websites, custom themes and tailored content experiences.</p>
         </div>
         <div class="card reveal" style="transition-delay:.2s;">
           <div class="service-icon">🛒</div>
-          <h3>E-commerce Development</h3>
-          <p>Modern online stores designed to provide a smooth shopping experience.</p>
+          <h3>WordPress Theme Development</h3>
+          <p>Custom theme styling and development shaped around your brand and content.</p>
         </div>
         <div class="card reveal" style="transition-delay:.25s;">
           <div class="service-icon">▤</div>
-          <h3>Responsive Web Design</h3>
-          <p>Websites that look and work perfectly across desktop, tablet and mobile devices.</p>
+          <h3>Prompt Engineering</h3>
+          <p>Thoughtful prompts and AI-assisted workflows that support faster, more focused delivery.</p>
         </div>
         <div class="card reveal" style="transition-delay:.3s;">
           <div class="service-icon">⟳</div>
-          <h3>Website Maintenance</h3>
-          <p>Continuous updates, improvements, bug fixes and performance optimization.</p>
+          <h3>Responsive Web Design</h3>
+          <p>Carefully tuned layouts that work beautifully across phones, tablets and desktops.</p>
         </div>
       </div>
     </div>
@@ -614,7 +623,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Toolkit</div>
-        <h2>Technologies we work with</h2>
+        <h2>My tools of the trade</h2>
       </div>
       <div class="tech-grid reveal">
         <div class="tech-badge"><span class="tech-dot"></span>HTML5</div>
@@ -627,6 +636,8 @@
         <div class="tech-badge"><span class="tech-dot"></span>WordPress</div>
         <div class="tech-badge"><span class="tech-dot"></span>Git</div>
         <div class="tech-badge"><span class="tech-dot"></span>GitHub</div>
+        <div class="tech-badge"><span class="tech-dot"></span>WordPress Themes</div>
+        <div class="tech-badge"><span class="tech-dot"></span>Prompt Engineering</div>
       </div>
     </div>
   </section>
@@ -636,8 +647,8 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Portfolio</div>
-        <h2>Selected Projects</h2>
-        <p class="section-desc">A selection of websites and digital experiences built with modern technologies.</p>
+        <h2>Ways I can bring your next idea to life</h2>
+        <p class="section-desc">A snapshot of the kinds of digital experiences I can create for your brand, business or product.</p>
       </div>
       <div class="grid grid-2" id="projectGrid">
         <!-- injected by JS -->
@@ -645,33 +656,33 @@
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
+  <!-- WHY WORK WITH ME -->
   <section class="section-tight border-top">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Why WEBORA</div>
-        <h2>Why WEBORA STUDIO?</h2>
+        <div class="eyebrow">The details matter</div>
+        <h2>A thoughtful partner from first idea to launch</h2>
       </div>
       <div class="grid grid-4">
         <div class="card reveal">
           <div class="service-icon">✦</div>
           <h3>Modern Design</h3>
-          <p>Clean interfaces designed for today's users.</p>
+          <p>Purposeful, polished interfaces that make your brand stand out.</p>
         </div>
         <div class="card reveal" style="transition-delay:.05s;">
           <div class="service-icon">▦</div>
           <h3>Responsive Everywhere</h3>
-          <p>Perfect experience across phones, tablets and desktops.</p>
+          <p>Careful responsive details across phones, tablets and desktops.</p>
         </div>
         <div class="card reveal" style="transition-delay:.1s;">
           <div class="service-icon">⚡</div>
           <h3>Performance Focused</h3>
-          <p>Fast-loading websites optimized for a smooth experience.</p>
+          <p>Lightweight, efficient builds designed for a smooth experience.</p>
         </div>
         <div class="card reveal" style="transition-delay:.15s;">
           <div class="service-icon">◎</div>
           <h3>Business Focused</h3>
-          <p>We don't just build websites—we build digital solutions around business goals.</p>
+          <p>Clear communication, dependable delivery and solutions shaped around your goals.</p>
         </div>
       </div>
     </div>
@@ -681,30 +692,30 @@
   <section class="section border-top" id="process">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">How We Work</div>
-        <h2>A clear process, start to launch</h2>
+        <div class="eyebrow">My process</div>
+        <h2>A clear path from idea to launch</h2>
       </div>
       <div class="process-track reveal" id="processTrack">
         <div class="process-line-fill" id="processFill"></div>
         <div class="process-step">
           <div class="process-num">01</div>
           <h3>Discover</h3>
-          <p>Understand your business, goals and requirements.</p>
+          <p>Get to know your idea, audience and goals.</p>
         </div>
         <div class="process-step">
           <div class="process-num">02</div>
           <h3>Design</h3>
-          <p>Create a modern visual direction and user experience.</p>
+          <p>Plan a clear visual direction and useful user experience.</p>
         </div>
         <div class="process-step">
           <div class="process-num">03</div>
           <h3>Develop</h3>
-          <p>Build the website using modern technologies and clean code.</p>
+          <p>Build and refine your website with the right tools.</p>
         </div>
         <div class="process-step">
           <div class="process-num">04</div>
           <h3>Launch</h3>
-          <p>Test, optimize and launch your website.</p>
+          <p>Test across devices, polish the details and launch.</p>
         </div>
       </div>
     </div>
@@ -714,226 +725,58 @@
   <section class="section border-top" id="about">
     <div class="wrap about-grid">
       <div class="reveal">
-        <div class="portrait">
-          <div class="portrait-inner">
-            <div class="avatar-mark">HA</div>
-            <img src="./hussain.png" alt="">
-            
-          </div>
-        </div>
-      </div>
-      <div class="reveal" style="transition-delay:.1s;">
-        <div class="eyebrow">Meet the Developer</div>
-        <h2>Hussain Abbas — Founder &amp; Web Developer</h2>
-        <p class="section-desc" style="max-width:560px;">I'm a web developer focused on creating modern, responsive and user-friendly websites and web applications. Through WEBORA STUDIO, I help businesses and professionals build a stronger presence online.</p>
+        <div class="eyebrow">A little about me</div>
+        <h2>Good websites start with understanding people.</h2>
+        <p class="section-desc" style="max-width:760px;">I’m Hussain Abbas, a frontend and WordPress developer who enjoys turning complex ideas into clear, friendly digital experiences. I care about thoughtful design, clean implementation and making every site work beautifully on every screen.</p>
         <div class="about-skills">
           <span class="skill-pill">HTML</span>
-          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">CSS3</span>
+          <span class="skill-pill">Tailwind CSS</span>
           <span class="skill-pill">JavaScript</span>
           <span class="skill-pill">React.js</span>
           <span class="skill-pill">Next.js</span>
-          <span class="skill-pill">Tailwind CSS</span>
-          <span class="skill-pill">Bootstrap</span>
           <span class="skill-pill">WordPress</span>
+          <span class="skill-pill">Theme Development</span>
+          <span class="skill-pill">Prompt Engineering</span>
+          <span class="skill-pill">Git &amp; GitHub</span>
         </div>
-      </div>
-    </div>
-
-    <div class="wrap reveal" style="margin-top:26px;">
-      <div class="team-grid">
-        <article class="member-card">
-          <div class="member-portrait">
-            <img src="./hussain.png" alt="Hussain Abbas">
-          </div>
-          <div class="member-body">
-            <h3>Hussain Abbas</h3>
-            <p>Founder &amp; Web Developer</p>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <div class="member-portrait">
-            <img src="./img1.jfif" alt="Md Antor Mia">
-          </div>
-          <div class="member-body">
-            <h3>Md Antor Mia</h3>
-            <p>Developer</p>
-          </div>
-        </article>
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
+  <!-- EXPERIENCE -->
   <section class="section-tight border-top">
     <div class="wrap">
-      <div class="stats-grid">
-        <div class="stat-card reveal">
-          <div class="stat-num">20+</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-card reveal" style="transition-delay:.05s;">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Technologies</div>
-        </div>
-        <div class="stat-card reveal" style="transition-delay:.1s;">
-          <div class="stat-num">100%</div>
-          <div class="stat-label">Responsive</div>
-        </div>
-        <div class="stat-card reveal" style="transition-delay:.15s;">
-          <div class="stat-num">24/7</div>
-          <div class="stat-label">Online Support</div>
-        </div>
+      <div class="section-head reveal" id="experience">
+        <div class="eyebrow">Where I’ve worked</div>
+        <h2>Experience that keeps me growing</h2>
+        <p class="section-desc">I’ve collaborated with teams to build and improve web experiences, learning something new with every project.</p>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card reveal">
+          <div class="experience-date">MARCH 2023 — 2024</div>
+          <h3>Web Developer</h3>
+          <div class="experience-company">TechEver Solutions</div>
+          <p>Worked on web development projects, building responsive interfaces and strengthening my frontend development skills.</p>
+        </article>
+        <article class="experience-card reveal" style="transition-delay:.08s;">
+          <div class="experience-date">2025 — 2026</div>
+          <h3>Web Developer</h3>
+          <div class="experience-company">Murazoid</div>
+          <p>Contributed to web projects with a focus on modern frontend development, WordPress and polished user experiences.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section border-top">
-  <div class="wrap">
-
-    <div class="section-head reveal">
-      <div class="eyebrow">Client Feedback</div>
-      <h2>What Our Clients Say</h2>
-      <p style="color:var(--text-muted);max-width:620px;">
-        We focus on clean design, reliable development and
-        digital experiences that help businesses grow online.
-      </p>
-    </div>
-
-    <div class="grid grid-3">
-
-      <!-- Testimonial 1 -->
-      <div class="testi-card reveal">
-
-        <div style="margin-bottom:18px;">
-          <span style="font-size:18px;">★★★★★</span>
-        </div>
-
-        <p class="testi-quote">
-          “WEBORA STUDIO delivered a clean and responsive
-          website with a modern look. The communication was clear
-          and the overall development process was smooth.”
-        </p>
-
-        <div class="testi-who">
-
-          <div class="testi-avatar">
-            BM
-          </div>
-
-          <div>
-            <div class="testi-name">
-              Business Website Client
-            </div>
-
-            <div style="
-              color:var(--text-muted);
-              font-size:13px;
-              margin-top:4px;
-            ">
-              Website Development
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- Testimonial 2 -->
-      <div
-        class="testi-card reveal"
-        style="transition-delay:.05s;"
-      >
-
-        <div style="margin-bottom:18px;">
-          <span style="font-size:18px;">★★★★★</span>
-        </div>
-
-        <p class="testi-quote">
-          “The website looks professional on both mobile and
-          desktop. WEBORA STUDIO understood the requirements and
-          turned the idea into a simple, user-friendly website.”
-        </p>
-
-        <div class="testi-who">
-
-          <div class="testi-avatar">
-            WE
-          </div>
-
-          <div>
-            <div class="testi-name">
-              Web Project Client
-            </div>
-
-            <div style="
-              color:var(--text-muted);
-              font-size:13px;
-              margin-top:4px;
-            ">
-              Responsive Web Design
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- Testimonial 3 -->
-      <div
-        class="testi-card reveal"
-        style="transition-delay:.1s;"
-      >
-
-        <div style="margin-bottom:18px;">
-          <span style="font-size:18px;">★★★★★</span>
-        </div>
-
-        <p class="testi-quote">
-          “A professional approach from start to finish. The
-          attention to responsive design, performance and clean
-          UI made the final result look polished and modern.”
-        </p>
-
-        <div class="testi-who">
-
-          <div class="testi-avatar">
-            WD
-          </div>
-
-          <div>
-            <div class="testi-name">
-              Development Client
-            </div>
-
-            <div style="
-              color:var(--text-muted);
-              font-size:13px;
-              margin-top:4px;
-            ">
-              Web Development
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
   <!-- CTA -->
   <section class="section-tight">
     <div class="cta-section reveal">
-      <h2>Have a Project in Mind?</h2>
-      <p>Let's turn your idea into a modern digital experience.</p>
+      <h2>Have a good idea? Let’s make it real.</h2>
+      <p>Tell me what you’re building. I’d love to help you bring it to life.</p>
       <div class="cta-actions">
-        <a href="#contact" class="btn btn-primary">Start Your Project</a>
-        <a href="#contact" class="btn btn-ghost">Contact Us</a>
+        <a href="#contact" class="btn btn-primary">Let’s Talk</a>
+        <a href="#experience" class="btn btn-ghost">View Experience</a>
       </div>
     </div>
   </section>
@@ -944,7 +787,7 @@
 
     <div class="section-head reveal">
       <div class="eyebrow">Get In Touch</div>
-      <h2>Let's Build Something Great</h2>
+      <h2>Let’s build something great</h2>
     </div>
 
     <div class="contact-grid">
@@ -1176,11 +1019,11 @@
         style="transition-delay:.1s;"
       >
 
-        <!-- Company Info -->
+        <!-- Contact Info -->
         <div class="info-card">
 
           <h3 style="margin-bottom:4px;">
-            WEBORA STUDIO
+            Hussain Abbas
           </h3>
 
           <p
@@ -1190,7 +1033,7 @@
               margin-bottom:18px;
             "
           >
-            Gilgit, Pakistan
+            Frontend &amp; WordPress Developer · Gilgit, Pakistan
           </p>
 
 
@@ -1269,7 +1112,7 @@
               font-size:14px;
             "
           >
-            We typically reply to project inquiries within 24 hours.
+            I’ll get back to your project inquiry as soon as I can.
           </p>
 
         </div>
@@ -1284,7 +1127,7 @@
               margin-bottom:10px;
             "
           >
-            What We Build
+            What I Build
           </h3>
 
           <p
@@ -1294,9 +1137,8 @@
               line-height:1.8;
             "
           >
-            Business Websites · Web Applications ·
-            React.js · Next.js · WordPress ·
-            E-commerce · Responsive Web Design
+            Frontend Development · React.js · Next.js · WordPress ·
+            Theme Development · Tailwind CSS · Prompt Engineering
           </p>
 
         </div>
@@ -1315,10 +1157,10 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">
-          <span class="logo-mark">WS</span>
-          <span>WEBORA STUDIO</span>
+          <span class="logo-mark">HA</span>
+          <span>HUSSAIN ABBAS</span>
         </div>
-        <p>We Design. We Develop. We Deliver.</p>
+        <p>Frontend developer creating thoughtful, responsive web experiences.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -1329,17 +1171,15 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="#">Privacy Policy</a>
+        <h4>Let’s Connect</h4>
+        <a href="#contact">Start a conversation</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 WEBORA STUDIO. All rights reserved.</p>
+      <p>© 2026 Hussain Abbas. All rights reserved.</p>
       <div class="socials">
-        <a class="social-btn" href="https://www.facebook.com/profile.php?id=61593325410887" aria-label="Facebook" title="Facebook (placeholder link)">f</a>
-        <a class="social-btn" href="" aria-label="Instagram" title="Instagram (placeholder link)">ig</a>
-        <a class="social-btn" href="#" aria-label="LinkedIn" title="LinkedIn (placeholder link)">in</a>
-        <a class="social-btn" href="#" aria-label="GitHub" title="GitHub (placeholder link)">gh</a>
+        <a class="social-btn" href="mailto:arbabhussan63@gmail.com" aria-label="Email Hussain" title="Email Hussain">✉</a>
+        <a class="social-btn" href="https://wa.me/923168440875" aria-label="WhatsApp Hussain" title="WhatsApp Hussain" target="_blank" rel="noopener noreferrer">WA</a>
       </div>
     </div>
   </div>
@@ -1528,31 +1368,27 @@
 
   const projects = [
     {
-      name: "Business Website",
-      desc: "A polished, conversion-focused website built to represent a growing business online.",
-      tags: ["React.js", "Responsive Design"],
-      hasRepo: true,
+      name: "Business Websites",
+      desc: "A distinctive, responsive online home that introduces your business clearly and helps visitors take the next step.",
+      tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
     },
 
     {
-      name: "Modern SaaS Platform",
-      desc: "A fast, SEO-friendly product marketing site and dashboard shell built with Next.js.",
-      tags: ["Next.js", "JavaScript"],
-      hasRepo: true,
+      name: "Modern Web Interfaces",
+      desc: "Fast, engaging product and application experiences made with reusable components and thoughtful interactions.",
+      tags: ["React.js", "Next.js", "JavaScript"],
     },
 
     {
-      name: "E-commerce Website",
-      desc: "A custom WordPress storefront designed for a smooth, mobile-friendly shopping experience.",
-      tags: ["WordPress", "Responsive Design"],
-      hasRepo: false,
+      name: "WordPress Websites & Themes",
+      desc: "Flexible WordPress experiences with custom styling and themes that make it easier to manage your content.",
+      tags: ["WordPress", "Theme Development"],
     },
 
     {
-      name: "Portfolio Website",
-      desc: "A clean personal portfolio built with modern web technologies for a fast, lightweight experience.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      hasRepo: true,
+      name: "Personal Portfolios",
+      desc: "A polished portfolio that tells your story, showcases your work and makes it easy for people to reach you.",
+      tags: ["Responsive Design", "UI", "Prompt Engineering"],
     },
   ];
 
@@ -1598,21 +1434,8 @@
                   href="#contact"
                   class="btn btn-ghost btn-sm"
                 >
-                  View Project
+                  Discuss a similar project
                 </a>
-
-                ${
-                  project.hasRepo
-                    ? `
-                      <a
-                        href="#"
-                        class="btn btn-ghost btn-sm"
-                      >
-                        GitHub
-                      </a>
-                    `
-                    : ""
-                }
 
               </div>
 
