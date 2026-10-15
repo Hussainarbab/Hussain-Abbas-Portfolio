@@ -692,6 +692,57 @@
   </div>
 </footer>
 
+<!-- PORTFOLIO CHATBOT -->
+<div class="portfolio-chat" id="portfolioChat">
+  <button
+    class="portfolio-chat-trigger"
+    id="portfolioChatTrigger"
+    type="button"
+    aria-expanded="false"
+    aria-controls="portfolioChatPanel"
+  >
+    <span class="portfolio-chat-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-5.5A7.5 7.5 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span>Ask anything</span>
+  </button>
+
+  <section
+    class="portfolio-chat-panel"
+    id="portfolioChatPanel"
+    aria-label="Ask Hussain's portfolio assistant"
+    aria-hidden="true"
+    hidden
+  >
+    <header class="portfolio-chat-header">
+      <div class="portfolio-chat-avatar" aria-hidden="true">HA</div>
+      <div class="portfolio-chat-heading">
+        <strong>Hussain's AI Assistant</strong>
+        <span><i></i> Ask me about Hussain</span>
+      </div>
+      <button class="portfolio-chat-close" id="portfolioChatClose" type="button" aria-label="Close chat">×</button>
+    </header>
+    <div class="portfolio-chat-messages" id="portfolioChatMessages" aria-live="polite" aria-relevant="additions">
+      <div class="portfolio-chat-message assistant">
+        Hi! I'm Hussain's portfolio assistant. Ask me about his skills, services, experience, or how to get in touch.
+      </div>
+    </div>
+    <form class="portfolio-chat-form" id="portfolioChatForm">
+      <label class="visually-hidden" for="portfolioChatInput">Ask a question about Hussain</label>
+      <input id="portfolioChatInput" name="question" type="text" placeholder="Ask anything..." autocomplete="off" maxlength="500" required>
+      <button type="submit" aria-label="Send message">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m21 3-7.2 18-3.6-7.2L3 10.2 21 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M10.2 13.8 15 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </form>
+  </section>
+</div>
+
 <script src="./script.js"></script>
 </body>
 </html>

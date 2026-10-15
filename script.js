@@ -265,6 +265,122 @@
 
 
   // =========================================================
+  // 8. PORTFOLIO CHAT ASSISTANT
+  // =========================================================
+
+  const chatTrigger = document.getElementById("portfolioChatTrigger");
+  const chatPanel = document.getElementById("portfolioChatPanel");
+  const chatClose = document.getElementById("portfolioChatClose");
+  const chatForm = document.getElementById("portfolioChatForm");
+  const chatInput = document.getElementById("portfolioChatInput");
+  const chatMessages = document.getElementById("portfolioChatMessages");
+
+  if (chatTrigger && chatPanel && chatClose && chatForm && chatInput && chatMessages) {
+    const portfolioAnswers = [
+      {
+        keywords: ["skill", "hunr", "maharat", "tech", "stack", "language", "html", "css", "javascript", "react", "next", "tailwind", "bootstrap", "git", "github"],
+        answer: "Hussain's skills include HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, Bootstrap, WordPress, WordPress theme development, Git and GitHub, and prompt engineering."
+      },
+      {
+        keywords: ["wordpress", "theme", "cms"],
+        answer: "Hussain builds WordPress websites and custom themes, with tailored styling and flexible content experiences."
+      },
+      {
+        keywords: ["experience", "tajurba", "tajurbe", "job", "career", "company", "worked", "works at", "work at", "naukri"],
+        answer: "Hussain worked as a Web Developer at TechEver Solutions from March 2023 to 2024, and at Murazoid from 2025 to 2026, contributing to responsive interfaces, frontend and WordPress projects."
+      },
+      {
+        keywords: ["service", "offer", "build", "what do", "what does", "can you", "kaam", "karte", "banate", "hire", "help"],
+        answer: "Hussain works on frontend development, React.js and Next.js interfaces, WordPress websites and themes, responsive web design, and prompt engineering."
+      },
+      {
+        keywords: ["where", "kahan", "location", "live", "based", "country", "city", "rehta"],
+        answer: "Hussain is based in Gilgit, Pakistan."
+      },
+      {
+        keywords: ["available", "availability", "freelance", "full-time", "full time", "opportunity", "maujood"],
+        answer: "Hussain is available for freelance and full-time opportunities. Use the contact form on this page to discuss a project."
+      },
+      {
+        keywords: ["contact", "rabta", "email", "phone", "whatsapp", "reach", "message"],
+        answer: "You can reach Hussain through the contact form on this page, by email at arbabhussan63@gmail.com, or on WhatsApp at +92 316 844 0875."
+      },
+      {
+        keywords: ["project", "portfolio", "website", "design", "example"],
+        answer: "Hussain's portfolio highlights business websites, modern web interfaces, WordPress websites and themes, and personal portfolios. Browse the Projects section to learn more."
+      },
+      {
+        keywords: ["about", "who", "kon", "kaun", "hussain", "yourself", "name", "naam"],
+        answer: "Hussain Abbas is a frontend and WordPress developer based in Gilgit, Pakistan. He enjoys turning complex ideas into clear, responsive digital experiences with thoughtful design and clean code."
+      },
+      {
+        keywords: ["process", "approach", "how"],
+        answer: "Hussain's process moves from understanding the idea and planning, through design and development, to testing, polishing, and launch."
+      }
+    ];
+
+    function setChatOpen(open) {
+      chatPanel.hidden = !open;
+      chatPanel.setAttribute("aria-hidden", String(!open));
+      chatTrigger.setAttribute("aria-expanded", String(open));
+
+      if (open) {
+        chatInput.focus();
+      } else {
+        chatTrigger.focus();
+      }
+    }
+
+    function addChatMessage(text, sender) {
+      const message = document.createElement("div");
+      message.className = "portfolio-chat-message " + sender;
+      message.textContent = text;
+      chatMessages.appendChild(message);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function getPortfolioAnswer(question) {
+      const normalizedQuestion = question.toLowerCase().replace(/[^\w\s+#.-]/g, " ");
+      const answer = portfolioAnswers.find(function (entry) {
+        return entry.keywords.some(function (keyword) {
+          return normalizedQuestion.includes(keyword);
+        });
+      });
+
+      return answer
+        ? answer.answer
+        : "I can answer questions about Hussain's skills, services, experience, location, projects, and contact details. Ask me about one of those, or use the contact form for anything else.";
+    }
+
+    chatTrigger.addEventListener("click", function () {
+      setChatOpen(chatPanel.hidden);
+    });
+
+    chatClose.addEventListener("click", function () {
+      setChatOpen(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !chatPanel.hidden) {
+        setChatOpen(false);
+      }
+    });
+
+    chatForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const question = chatInput.value.trim();
+
+      if (!question) return;
+
+      addChatMessage(question, "user");
+      chatInput.value = "";
+      addChatMessage(getPortfolioAnswer(question), "assistant");
+      chatInput.focus();
+    });
+  }
+
+
+  // =========================================================
   // 8. CONTACT FORM
   // =========================================================
 
