@@ -496,7 +496,7 @@
     position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
     clip:rect(0,0,0,0);white-space:nowrap;border:0;
   }
-  .portfolio-chat{position:fixed;left:24px;bottom:24px;z-index:150;font-family:var(--font-body);}
+  .portfolio-chat{position:fixed;right:24px;bottom:24px;z-index:150;font-family:var(--font-body);}
   .portfolio-chat-trigger{
     display:flex;align-items:center;gap:10px;padding:11px 18px 11px 12px;
     border:1px solid rgba(90,165,255,.45);border-radius:999px;
@@ -508,7 +508,7 @@
   .portfolio-chat-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;color:#fff;background:linear-gradient(135deg,var(--blue),var(--cyan));}
   .portfolio-chat-icon svg{width:20px;height:20px;}
   .portfolio-chat-panel{
-    position:absolute;left:0;bottom:66px;width:min(370px,calc(100vw - 32px));height:min(490px,calc(100dvh - 120px));
+    position:absolute;right:0;bottom:66px;width:min(370px,calc(100vw - 32px));height:min(490px,calc(100dvh - 120px));
     display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--border-bright);
     border-radius:18px;background:rgba(8,11,20,.98);backdrop-filter:blur(18px);
     box-shadow:0 20px 70px rgba(0,0,0,.58),0 0 36px rgba(59,130,246,.12);
@@ -540,6 +540,6 @@
   .portfolio-chat-form button:hover{filter:brightness(1.12);}
   .portfolio-chat-form button svg{width:19px;height:19px;}
   @media (max-width:600px){
-    .portfolio-chat{left:16px;bottom:16px;}
+    .portfolio-chat{right:16px;bottom:16px;}
     .portfolio-chat-panel{bottom:62px;height:min(470px,calc(100dvh - 100px));}
   }

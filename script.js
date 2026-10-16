@@ -278,44 +278,92 @@
   if (chatTrigger && chatPanel && chatClose && chatForm && chatInput && chatMessages) {
     const portfolioAnswers = [
       {
-        keywords: ["skill", "hunr", "maharat", "tech", "stack", "language", "html", "css", "javascript", "react", "next", "tailwind", "bootstrap", "git", "github"],
-        answer: "Hussain's skills include HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, Bootstrap, WordPress, WordPress theme development, Git and GitHub, and prompt engineering."
+        keywords: ["good developer", "great developer", "professional developer", "skilled developer", "developer or not", "developer hain", "developer hai", "acha developer", "achha developer", "achay developer", "ache developer", "اچھے ڈویلپر", "اچھا ڈویلپر", "پروفیشنل ڈویلپر", "اچھا ڈیولپر", "پروفیشنل"],
+        answer: {
+          en: "Yes—Hussain is a professional web developer. His portfolio shows experience building responsive websites and modern interfaces, with skills in frontend development, React, Next.js, WordPress, and custom themes.",
+          roman: "Jee haan, Hussain ek professional web developer hain. Unke portfolio mein responsive websites aur modern interfaces ka kaam, aur frontend development, React, Next.js, WordPress aur custom themes ki skills shamil hain.",
+          ur: "جی ہاں، حسین ایک پروفیشنل ویب ڈویلپر ہیں۔ ان کے پورٹ فولیو میں ریسپانسیو ویب سائٹس اور جدید انٹرفیس بنانے کا تجربہ، اور فرنٹ اینڈ ڈیولپمنٹ، React، Next.js، WordPress اور کسٹم تھیمز کی مہارت شامل ہے۔"
+        }
       },
       {
-        keywords: ["wordpress", "theme", "cms"],
-        answer: "Hussain builds WordPress websites and custom themes, with tailored styling and flexible content experiences."
+        keywords: ["skill", "skills", "hunr", "maharat", "tech", "stack", "language", "html", "css", "javascript", "react", "next", "tailwind", "bootstrap", "git", "github", "مہارت", "مہارتیں", "ہنر", "اسکل"],
+        answer: {
+          en: "Hussain's skills include HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, Bootstrap, WordPress and theme development, Git and GitHub, and prompt engineering.",
+          roman: "Hussain ki skills mein HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, Bootstrap, WordPress aur theme development, Git, GitHub, aur prompt engineering shamil hain.",
+          ur: "حسین کی مہارتوں میں HTML5، CSS3، JavaScript، React.js، Next.js، Tailwind CSS، Bootstrap، WordPress اور تھیم ڈیولپمنٹ، Git، GitHub، اور پرامپٹ انجینئرنگ شامل ہیں۔"
+        }
       },
       {
-        keywords: ["experience", "tajurba", "tajurbe", "job", "career", "company", "worked", "works at", "work at", "naukri"],
-        answer: "Hussain worked as a Web Developer at TechEver Solutions from March 2023 to 2024, and at Murazoid from 2025 to 2026, contributing to responsive interfaces, frontend and WordPress projects."
+        keywords: ["experience", "tajurba", "tajurbe", "job", "career", "company", "worked", "works at", "work at", "naukri", "تجربہ", "نوکری", "کام کیا"],
+        answer: {
+          en: "Hussain worked as a Web Developer at TechEver Solutions from March 2023 to 2024, and at Murazoid from 2025 to 2026, contributing to responsive interfaces, frontend, and WordPress projects.",
+          roman: "Hussain ne March 2023 se 2024 tak TechEver Solutions mein aur 2025 se 2026 tak Murazoid mein Web Developer ke taur par kaam kiya. Unka kaam responsive interfaces, frontend aur WordPress projects par raha.",
+          ur: "حسین نے مارچ 2023 سے 2024 تک TechEver Solutions اور 2025 سے 2026 تک Murazoid میں Web Developer کے طور پر کام کیا۔ ان کا کام ریسپانسیو انٹرفیسز، فرنٹ اینڈ اور WordPress پروجیکٹس پر رہا۔"
+        }
       },
       {
-        keywords: ["service", "offer", "build", "what do", "what does", "can you", "kaam", "karte", "banate", "hire", "help"],
-        answer: "Hussain works on frontend development, React.js and Next.js interfaces, WordPress websites and themes, responsive web design, and prompt engineering."
+        keywords: ["service", "services", "offer", "build", "what do", "what does", "can you", "kaam", "karte", "banate", "hire", "help", "خدمات", "کیا کرتے", "کیا بناتے"],
+        answer: {
+          en: "Hussain offers frontend development, React.js and Next.js interfaces, WordPress websites and themes, responsive web design, and prompt engineering.",
+          roman: "Hussain frontend development, React.js aur Next.js interfaces, WordPress websites aur themes, responsive web design, aur prompt engineering ke kaam karte hain.",
+          ur: "حسین فرنٹ اینڈ ڈیولپمنٹ، React.js اور Next.js انٹرفیسز، WordPress ویب سائٹس اور تھیمز، ریسپانسیو ویب ڈیزائن، اور پرامپٹ انجینئرنگ کی خدمات فراہم کرتے ہیں۔"
+        }
       },
       {
-        keywords: ["where", "kahan", "location", "live", "based", "country", "city", "rehta"],
-        answer: "Hussain is based in Gilgit, Pakistan."
+        keywords: ["wordpress", "theme", "cms", "ورڈپریس", "تھیم"],
+        answer: {
+          en: "Hussain builds WordPress websites and custom themes, with tailored styling and flexible content experiences.",
+          roman: "Hussain WordPress websites aur custom themes banate hain, jin mein tailored styling aur content manage karne ki flexibility hoti hai.",
+          ur: "حسین WordPress ویب سائٹس اور کسٹم تھیمز بناتے ہیں، جن میں ضرورت کے مطابق اسٹائلنگ اور مواد کو آسانی سے منظم کرنے کی سہولت ہوتی ہے۔"
+        }
       },
       {
-        keywords: ["available", "availability", "freelance", "full-time", "full time", "opportunity", "maujood"],
-        answer: "Hussain is available for freelance and full-time opportunities. Use the contact form on this page to discuss a project."
+        keywords: ["where", "kahan", "location", "live", "based", "country", "city", "rehta", "کہاں", "رہتے", "شہر", "ملک"],
+        answer: {
+          en: "Hussain is based in Gilgit, Pakistan.",
+          roman: "Hussain Gilgit, Pakistan mein rehte hain.",
+          ur: "حسین گلگت، پاکستان میں رہتے ہیں۔"
+        }
       },
       {
-        keywords: ["contact", "rabta", "email", "phone", "whatsapp", "reach", "message"],
-        answer: "You can reach Hussain through the contact form on this page, by email at arbabhussan63@gmail.com, or on WhatsApp at +92 316 844 0875."
+        keywords: ["available", "availability", "freelance", "full-time", "full time", "opportunity", "maujood", "دستیاب", "فری لانس", "ملازمت"],
+        answer: {
+          en: "Hussain is available for freelance and full-time opportunities. Use the contact form on this page to discuss a project.",
+          roman: "Hussain freelance aur full-time opportunities ke liye available hain. Project discuss karne ke liye page par contact form use karein.",
+          ur: "حسین فری لانس اور فل ٹائم مواقع کے لیے دستیاب ہیں۔ پروجیکٹ پر بات کرنے کے لیے اس صفحے کا contact form استعمال کریں۔"
+        }
       },
       {
-        keywords: ["project", "portfolio", "website", "design", "example"],
-        answer: "Hussain's portfolio highlights business websites, modern web interfaces, WordPress websites and themes, and personal portfolios. Browse the Projects section to learn more."
+        keywords: ["contact", "rabta", "email", "phone", "whatsapp", "reach", "message", "رابطہ", "ای میل", "فون", "واٹس ایپ"],
+        answer: {
+          en: "You can reach Hussain through the contact form on this page, by email at arbabhussan63@gmail.com, or on WhatsApp at +92 316 844 0875.",
+          roman: "Aap Hussain se is page ke contact form, arbabhussan63@gmail.com par email, ya WhatsApp +92 316 844 0875 par rabta kar sakte hain.",
+          ur: "آپ اس صفحے کے contact form، arbabhussan63@gmail.com پر ای میل، یا WhatsApp نمبر +92 316 844 0875 پر حسین سے رابطہ کر سکتے ہیں۔"
+        }
       },
       {
-        keywords: ["about", "who", "kon", "kaun", "hussain", "yourself", "name", "naam"],
-        answer: "Hussain Abbas is a frontend and WordPress developer based in Gilgit, Pakistan. He enjoys turning complex ideas into clear, responsive digital experiences with thoughtful design and clean code."
+        keywords: ["project", "portfolio", "website", "design", "example", "پروجیکٹ", "پورٹ فولیو", "ویب سائٹ"],
+        answer: {
+          en: "Hussain's portfolio includes business websites, modern web interfaces, WordPress websites and themes, and personal portfolios. Browse the Projects section to learn more.",
+          roman: "Hussain ke portfolio mein business websites, modern web interfaces, WordPress websites aur themes, aur personal portfolios shamil hain. Mazeed dekhne ke liye Projects section dekhein.",
+          ur: "حسین کے پورٹ فولیو میں بزنس ویب سائٹس، جدید ویب انٹرفیسز، WordPress ویب سائٹس اور تھیمز، اور ذاتی پورٹ فولیوز شامل ہیں۔ مزید دیکھنے کے لیے Projects سیکشن دیکھیں۔"
+        }
       },
       {
-        keywords: ["process", "approach", "how"],
-        answer: "Hussain's process moves from understanding the idea and planning, through design and development, to testing, polishing, and launch."
+        keywords: ["about", "who", "kon", "kaun", "hussain", "yourself", "name", "naam", "کون", "حسین", "نام", "بارے میں"],
+        answer: {
+          en: "Hussain Abbas is a frontend and WordPress developer based in Gilgit, Pakistan. He enjoys turning complex ideas into clear, responsive digital experiences with thoughtful design and clean code.",
+          roman: "Hussain Abbas Gilgit, Pakistan ke frontend aur WordPress developer hain. Woh complex ideas ko saaf, responsive digital experiences mein badalne aur clean code likhne ko ahmiyat dete hain.",
+          ur: "حسین عباس گلگت، پاکستان سے تعلق رکھنے والے فرنٹ اینڈ اور WordPress ڈویلپر ہیں۔ وہ پیچیدہ خیالات کو سادہ، ریسپانسیو ڈیجیٹل تجربات میں ڈھالنے اور صاف کوڈ لکھنے کو اہمیت دیتے ہیں۔"
+        }
+      },
+      {
+        keywords: ["process", "approach", "how does he work", "workflow", "عمل", "طریقہ"],
+        answer: {
+          en: "Hussain's process moves from understanding the idea and planning, through design and development, to testing, polishing, and launch.",
+          roman: "Hussain pehle idea samajh kar planning karte hain, phir design aur development ke baad testing, final polish aur launch karte hain.",
+          ur: "حسین پہلے خیال کو سمجھ کر منصوبہ بندی کرتے ہیں، پھر ڈیزائن اور ڈیولپمنٹ کے بعد ٹیسٹنگ، بہتری اور لانچ کرتے ہیں۔"
+        }
       }
     ];
 
@@ -340,16 +388,29 @@
     }
 
     function getPortfolioAnswer(question) {
-      const normalizedQuestion = question.toLowerCase().replace(/[^\w\s+#.-]/g, " ");
+      const hasUrduScript = /[\u0600-\u06FF]/.test(question);
+      const normalizedQuestion = question.toLowerCase().replace(/[^\p{L}\p{N}\s+#.-]/gu, " ").replace(/\s+/g, " ").trim();
+      const romanUrdu = /\b(kya|hai|hain|ka|ki|ke|ko|mein|ma|mera|meri|mere|batao|btao|karo|kro|acha|achha|achay|ache|nahi|nahin|kaun|kon|kahan|kyun|aur|aap|mujhe|chahiye|kar|sakte|sakta|sakti|rehta|rehte|hun|ho)\b/i.test(normalizedQuestion);
+      const searchableQuestion = " " + normalizedQuestion + " ";
       const answer = portfolioAnswers.find(function (entry) {
         return entry.keywords.some(function (keyword) {
-          return normalizedQuestion.includes(keyword);
+          return searchableQuestion.includes(" " + keyword.toLowerCase() + " ");
         });
       });
 
-      return answer
-        ? answer.answer
-        : "I can answer questions about Hussain's skills, services, experience, location, projects, and contact details. Ask me about one of those, or use the contact form for anything else.";
+      if (answer) {
+        return answer.answer[hasUrduScript ? "ur" : romanUrdu ? "roman" : "en"];
+      }
+
+      if (hasUrduScript) {
+        return "میں حسین کے پورٹ فولیو کے بارے میں جواب دے سکتا ہوں، مثلاً ان کی مہارتیں، خدمات، تجربہ، پروجیکٹس اور رابطے کی معلومات۔ اس سوال کی معلومات پورٹ فولیو میں موجود نہیں ہیں۔";
+      }
+
+      if (romanUrdu) {
+        return "Main Hussain ke portfolio ke mutaliq sawalon ka jawab de sakta hoon, jaise unki skills, services, experience, projects aur contact details. Is sawal ki maloomat portfolio mein nahi hai.";
+      }
+
+      return "I can answer questions about Hussain's portfolio, including his skills, services, experience, projects, and contact details. This information isn't available in the portfolio.";
     }
 
     chatTrigger.addEventListener("click", function () {
